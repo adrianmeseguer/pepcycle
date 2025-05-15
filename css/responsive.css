@@ -1,0 +1,239 @@
+@media (max-width: 768px) {
+    /* HEADER Y NAVEGACIÓN */
+    #cesta {
+        right: 20px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    #cesta i {
+        font-size: 14px;
+    }
+    
+    nav {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    
+    #hamburguesa {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 20px;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(71, 73, 77);
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+        padding: 5px 0;
+        gap: 3px;
+    }
+    
+    #menu-toggle {
+        display: block;
+    }
+    
+    #menu-toggle:checked + #hamburguesa + ul {
+        display: flex;
+    }
+    
+    #menu-toggle:checked ~ body {
+        overflow: hidden;
+    }
+    
+    nav ul li {
+        padding: 5px 0;
+    }
+    
+    nav ul li a {
+        padding: 8px 10px;
+        font-size: 15px;
+    }
+    
+    /* PÁGINA PRINCIPAL */
+    #contenedorTituloIndex {
+        max-width: 90%;
+        padding: 6px 12px;
+    }
+    
+    #contenedorTituloIndex h2 {
+        font-size: 20px;
+    }
+    
+    #presentacionIndexUno,
+    #presentacionIndexDos,
+    #presentacionIndexTres {
+        width: 90%;
+        max-width: 600px;
+        margin: 15px auto;
+        text-align: center;
+    }
+    
+    #articulosIndex {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    
+    .tdArticulosIndex {
+        width: 100% !important;
+        max-width: 600px !important;
+        height: 350px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+    
+    .imagenBiciIndex {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 20px;
+    }
+    
+    .tdArticulosIndex + .tdArticulosIndex {
+        margin-top: -15px !important;
+    }
+    
+    /* FOOTER */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    
+    .footer-column {
+        width: 100%;
+        padding: 10px 0;
+    }
+    
+    #redesFooter ul {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .redes {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .enlacesWeb {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    /* PÁGINAS DE BICICLETAS */
+    .seccionPresentacionBicis {
+        padding: 15px;
+        width: 95%;
+        font-size: 14px;
+    }
+    
+    .tablaIzquierda {
+        display: none;
+    }
+    
+    .bicisContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .biciItem {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    
+    /* FORMULARIOS */
+    #contenedorFormulario {
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .inputFormulario {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+    
+    /* POLÍTICA */
+    #contenedorPolitica {
+        padding: 15px;
+        width: 95%;
+    }
+    
+    .contenedorPoliticas {
+        padding: 15px;
+    }
+    
+    footer {
+        padding: 15px;
+    }
+    
+    .contenedorPoliticas ul li::before {
+        left: -15px;
+    }
+    
+    /* ACCESORIOS */
+    .seccionAccesorios {
+        min-height: auto;
+        margin-bottom: 80px;
+    }
+    
+    .contenedorAccesorios {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+    
+    .accesorio {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+/* TABLETS Y ESCRITORIO */
+@media (max-height: 500px) and (min-width: 768px) {
+    #presentacionIndexUno,
+    #presentacionIndexDos,
+    #presentacionIndexTres {
+        width: 60%;
+        max-width: 800px;
+        font-size: 18px;
+        padding: 25px;
+    }
+}
+
+@media (min-width: 1024px) {
+    #presentacionIndexUno,
+    #presentacionIndexDos,
+    #presentacionIndexTres {
+        width: 75%;
+        max-width: 950px;
+        font-size: 18px;
+    }
+}
