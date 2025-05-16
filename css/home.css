@@ -1,5 +1,5 @@
 #imagenFondoIndex {
-    background-image: url(fotos/imagenesFondo/imagenPrueba.webp);
+    background-image: url(./imagenes_css/imagenPrueba.jpg);
     background-size: cover;
     background-position: center;
     padding: 5rem 0;
