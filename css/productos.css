@@ -1,0 +1,373 @@
+/* Estilos generales para páginas de productos */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+main {
+    flex: 1;
+}
+
+/* Estilos para la sección de producto */
+.producto {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.producto img {
+    width: 45%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.producto-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.producto-info h1 {
+    margin-top: 0;
+    color: #555555;
+    font-size: 2rem;
+}
+
+.precio {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #555555;
+    margin: 15px 0;
+}
+
+.producto-info p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el selector de tallas */
+.contenedorDesplegable {
+    margin-bottom: 20px;
+}
+
+.contenedorDesplegable label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.desplegableTallasBicis {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.desplegableTallasBicis:focus {
+    outline: none;
+    border-color: #9d9d9d;
+}
+
+/* Estilos para botones */
+.btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #9b9b9b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #777777;
+}
+
+.botonComprar {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #9b9b9b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.botonComprar:hover {
+    background-color: #777777;
+}
+
+/* Estilos para el botón de volver */
+.volver-container {
+    max-width: 1000px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.btn-volver {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #9b9b9b;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-volver:hover {
+    background-color: #777777;
+}
+
+.btn-volver i {
+    margin-right: 5px;
+}
+
+/* Estilos para modales */
+.modal-error, .modal-exito {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-error-content, .modal-contenido-exito {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+}
+
+.modal-error-content h3 {
+    color: #f44336;
+    margin-top: 0;
+}
+
+.modal-contenido-exito h2 {
+    color: #4CAF50;
+    margin-top: 0;
+}
+
+.modal-error-content button, .btn-cerrar-exito {
+    padding: 10px 20px;
+    background-color: #9b9b9b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.modal-error-content button:hover, .btn-cerrar-exito:hover {
+    background-color: #777777;
+}
+
+/* Estilos para la cesta de compra */
+.cesta-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tabla-cesta {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.tabla-cesta th, .tabla-cesta td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+.tabla-cesta th {
+    background-color: #9d9d9d;
+    color: white;
+}
+
+.resumen-cesta {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.btn-eliminar {
+    background-color: #f44336;
+}
+
+.btn-eliminar:hover {
+    background-color: #d32f2f;
+}
+
+.mensaje-vacia-cesta {
+    background-color: #ffeb3b;
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.mensaje-vacia-cesta i {
+    font-size: 2rem;
+    color: #f44336;
+    margin-right: 10px;
+}
+
+/* Estilos para la sección de bicicletas (similar a bicisCarretera.html) */
+.seccionBicis {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.seccionBicis h1 {
+    text-align: center;
+    color: #555555;
+    margin-bottom: 30px;
+}
+
+.bicisContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.biciItem {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedorNombreBici {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #555555;
+    margin-bottom: 15px;
+}
+
+.contenedorImgBici {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.imgBicis {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.contendorBiografiaBici {
+    flex: 1;
+    line-height: 1.6;
+}
+
+.contenedorPrecioBici {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #555555;
+    text-align: right;
+    margin: 15px 0;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .producto {
+        flex-direction: column;
+    }
+    
+    .producto img {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .biciItem {
+        width: 100%;
+    }
+    
+    .cesta-container {
+        margin: 20px;
+        padding: 15px;
+    }
+    
+    .tabla-cesta th, .tabla-cesta td {
+        padding: 8px;
+        font-size: 14px;
+    }
+    
+    .resumen-cesta {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tabla-cesta th, .tabla-cesta td {
+        font-size: 12px;
+        padding: 6px;
+    }
+    
+    .resumen-cesta {
+        font-size: 14px;
+    }
+    
+    .btn {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}

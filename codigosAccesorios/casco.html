@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css">
+     <link rel="stylesheet" href="../css/main.css"> 
+    <link rel="stylesheet" href="../css/productos.css">
+    <script src="jsCesta.js"></script>
     <link rel="shortcut icon" href="../fotos/logo/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="jsCesta.js"></script>
     <title>Casco Pepcycle</title>
-    <style>
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -22,26 +20,33 @@
         </div>
     </header>
 
-    <nav>
+           <nav>
         <input type="checkbox" id="menu-toggle">
         <label id="hamburguesa" for="menu-toggle">☰</label>
-        <ul>
+ <ul>
             <li><a href="../index.html" class="enlaceNav">Inicio</a></li>
             <li class="desplegableNav">
                 <a href="#" class="enlaceNav">Bicis</a>
                 <ul class="desplegableNavContenido">
-                    <li><a href="../bicisCarretera.html">Carretera</a></li>
-                    <li><a href="../bicisMontana.html">Montaña</a></li>
-                    <li><a href="../bicisPista.html">Pista</a></li>
-                    <li><a href="../accesorios.html">Accesorios</a></li>
+                    <li><a href="../bicisCarretera.html" target="_blank">Carretera</a></li>
+                    <li><a href="../bicisMontana.html" target="_blank">Montaña</a></li>
+                    <li><a href="../bicisPista.html" target="_blank">Pista</a></li>
                 </ul>
             </li>
-            <li><a href="../index.html#conocenos" class="enlaceNav">Conócenos</a></li>
-            <li><a href="../registro.html" class="enlaceNav">Registro</a></li>
+            <li><a href="../accesorios.html" class="enlaceNav">Accesorios</a></li>
+            <li><a href="../conocenos.html" class="enlaceNav">Conócenos</a></li>
+            <li><a href="../blog.html" class="enlaceNav" target="_blank">Blog</a></li>
         </ul>
         <div id="cesta">
-            <a href="../cestaCompra.html">
+            <a href="../cestaCompra.html" target="_blank">
                 <i class="fa-solid fa-shopping-cart"></i>
+            </a>
+        </div>
+
+        <div id="usuario">
+            <a href="../registro.html" target="_blank">
+                <i class="fa-solid fa-user"></i>
+
             </a>
         </div>
     </nav>
@@ -55,8 +60,8 @@
     <section class="producto">
         <img src="../fotos/fotosAccesorios/casco.webp" alt="Casco">
         <div class="producto-info">
-            <h1 style="text-align: center;">Casco Pepcycle</h1>
-            <p class="precio" style="text-align: right;">185,99€</p>
+            <h1>Casco Pepcycle</h1>
+            <p class="precio">185,99€</p>
             <p>Este casco ofrece una combinación perfecta de seguridad y confort. 
                 Con un diseño liviano y materiales de alta calidad, asegura 
                 una protección eficaz sin perder estilo. Ideal para ciclistas 
@@ -90,7 +95,7 @@
     <div id="modalExito" class="modal-exito">
         <div class="modal-contenido-exito">
             <h2>¡Casco Pepcycle añadido a la cesta!</h2>
-            <p>¡Tu bicicleta personalizada ha sido guardada con éxito! Ahora puedes continuar comprando o revisar tu cesta.</p>
+            <p>¡Tu producto ha sido añadido con éxito! Ahora puedes continuar comprando o revisar tu cesta.</p>
             <button class="btn-cerrar-exito" onclick="cerrarModalExito()">Cerrar</button>
         </div>
     </div>
@@ -128,58 +133,6 @@
         <p class="copyright">&copy; Copyright Pepcycle 2025 | Todos los derechos reservados.</p>
     </footer>
 
-    <script>
-        function addToCart() {
-            const nombreProducto = "Casco Pepcycle";
-            const precioNumero = 185.99; // Usa siempre punto como separador decimal
-            const tallaSeleccionada = document.querySelector('.desplegableTallasBicis').value;
-    
-            if (tallaSeleccionada === "Talla no elegida") {
-                mostrarModalError();
-                return;
-            }
-    
-            // Formatear precio correctamente con separadores españoles:
-            const precioFormateado = precioNumero.toLocaleString('es-ES', {
-                minimumFractionDigits: 2,
-                maximumFractionDigits: 2,
-                useGrouping: true
-            }) + " €";
-    
-            const producto = {
-                nombre: nombreProducto,
-                precio: precioFormateado,
-                precioNumero: precioNumero,
-                cantidad: 1,
-                talla: tallaSeleccionada
-            };
-    
-            let cesta = JSON.parse(localStorage.getItem('cesta')) || [];
-            cesta.push(producto);
-            localStorage.setItem('cesta', JSON.stringify(cesta));
-    
-            mostrarModalExito();
-        }
-    
-        function mostrarModalError() {
-            const modal = document.getElementById('modalError');
-            modal.style.display = 'flex';
-        }
-    
-        function cerrarModalError() {
-            const modal = document.getElementById('modalError');
-            modal.style.display = 'none';
-        }
-    
-        function mostrarModalExito() {
-            const modal = document.getElementById('modalExito');
-            modal.style.display = 'flex';
-        }
-    
-        function cerrarModalExito() {
-            const modal = document.getElementById('modalExito');
-            modal.style.display = 'none';
-        }
-    </script>
+    <script src="../js/cesta.js"></script>
 </body>
 </html>

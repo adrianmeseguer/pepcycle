@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css">
+   <link rel="stylesheet" href="../css/main.css"> 
+    <link rel="stylesheet" href="../css/productos.css">
+    <script src="jsCesta.js"></script>
     <link rel="shortcut icon" href="../fotos/logo/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Fixie</title>
@@ -22,29 +24,37 @@
         </div>
     </header>
 
-    <nav>
+            <nav>
         <input type="checkbox" id="menu-toggle">
         <label id="hamburguesa" for="menu-toggle">☰</label>
-        <ul>
+ <ul>
             <li><a href="../index.html" class="enlaceNav">Inicio</a></li>
             <li class="desplegableNav">
                 <a href="#" class="enlaceNav">Bicis</a>
                 <ul class="desplegableNavContenido">
-                    <li><a href="../bicisCarretera.html">Carretera</a></li>
-                    <li><a href="../bicisMontana.html">Montaña</a></li>
-                    <li><a href="../bicisPista.html">Pista</a></li>
-                    <li><a href="../accesorios.html">Accesorios</a></li>
+                    <li><a href="../bicisCarretera.html" target="_blank">Carretera</a></li>
+                    <li><a href="../bicisMontana.html" target="_blank">Montaña</a></li>
+                    <li><a href="../bicisPista.html" target="_blank">Pista</a></li>
                 </ul>
             </li>
-            <li><a href="../index.html#conocenos" class="enlaceNav">Conócenos</a></li>
-            <li><a href="../registro.html" class="enlaceNav">Registro</a></li>
+            <li><a href="../accesorios.html" class="enlaceNav">Accesorios</a></li>
+            <li><a href="../conocenos.html" class="enlaceNav">Conócenos</a></li>
+            <li><a href="../blog.html" class="enlaceNav" target="_blank">Blog</a></li>
         </ul>
         <div id="cesta">
-            <a href="../cestaCompra.html">
+            <a href="../cestaCompra.html" target="_blank">
                 <i class="fa-solid fa-shopping-cart"></i>
             </a>
         </div>
+
+        <div id="usuario">
+            <a href="../registro.html" target="_blank">
+                <i class="fa-solid fa-user"></i>
+
+            </a>
+        </div>
     </nav>
+
 
     <div class="volver-container">
         <a href="../bicisPista.html#biciCincoPista" class="btn-volver">

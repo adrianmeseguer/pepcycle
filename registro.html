@@ -7,6 +7,19 @@
     <link rel="shortcut icon" href="fotos/logo/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Registro</title>
+    <style>
+        html {
+            scroll-behavior: smooth; /* Añade desplazamiento suave */
+        }
+        body {
+      background-image: url(fotos/imagenesFondo/fondobicis.jpeg);
+      background-size: cover;         /* Hace que la imagen cubra todo el fondo */
+      background-repeat: no-repeat;   /* Evita que la imagen se repita */
+      background-position: center;    /* Centra la imagen */
+      margin: 0;
+      height: 100vh;
+    }
+    </style>
 </head>
 <body>
     <header>
@@ -28,19 +41,27 @@
                     <li><a href="bicisCarretera.html" target="_blank">Carretera</a></li>
                     <li><a href="bicisMontana.html" target="_blank">Montaña</a></li>
                     <li><a href="bicisPista.html" target="_blank">Pista</a></li>
-                    <li><a href="accesorios.html" target="_blank">Accesorios</a></li>
                 </ul>
             </li>
-            <li><a href="index.html#conocenos" class="enlaceNav">Conócenos</a></li>
+            <li><a href="accesorios.html" class="enlaceNav">Accesorios</a></li>
+            <li><a href="#conocenos" class="enlaceNav">Conócenos</a></li>
+            <li><a href="blog.html" class="enlaceNav" target="_blank">Blog</a></li>
         </ul>
 
         <div id="cesta">
-            <a href="formularioCompra.html" target="_blank">
+            <a href="cestaCompra.html" target="_blank">
                 <i class="fa-solid fa-shopping-cart"></i>
             </a>
         </div>
-    </nav>
 
+        <div id="usuario">
+            <a href="registro.html" target="_blank">
+                <i class="fa-solid fa-user"></i>
+
+            </a>
+        </div>
+
+    </nav>
     <div id="fondoRegistro">
         <form action="registroCompletado.html" method="GET">
             <table id="tablaRegistro">
