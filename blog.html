@@ -6,19 +6,107 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="shortcut icon" href="fotos/logo/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <title>Pepcycle</title>
+    <title>Blog - Pepcycle</title>
     <style>
         html {
             scroll-behavior: smooth; /* Añade desplazamiento suave */
         }
         body {
-      background-image: url(fotos/imagenesFondo/fondobicis.jpeg);
-      background-size: cover;         /* Hace que la imagen cubra todo el fondo */
-      background-repeat: no-repeat;   /* Evita que la imagen se repita */
-      background-position: center;    /* Centra la imagen */
-      margin: 0;
-      height: 100vh;
-    }
+            background-image: url(fotos/imagenesFondo/fondobicis.jpeg);
+            background-size: cover;         /* Hace que la imagen cubra todo el fondo */
+            background-repeat: no-repeat;   /* Evita que la imagen se repita */
+            background-position: center;    /* Centra la imagen */
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        
+        /* Estilos para el contenido del blog */
+        .blog-container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+        }
+        
+        .blog-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+        }
+        
+        .blog-posts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: space-between;
+        }
+        
+        .blog-post {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: calc(50% - 20px);
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .blog-post {
+                width: 100%;
+            }
+        }
+        
+        .blog-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+        
+        .blog-content {
+            padding: 20px;
+        }
+        
+        .blog-content h2 {
+            color: #333;
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+        
+        .blog-meta {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        
+        .blog-text p {
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+        .blog-text h3 {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .blog-cta {
+            display: inline-block;
+            background-color: #e74c3c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        
+        .blog-cta:hover {
+            background-color: #c0392b;
+        }
     </style>
 </head>
 <body>
@@ -30,7 +118,7 @@
         </div>
     </header>
 
-   <nav>
+    <nav>
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle" id="hamburguesa">☰</label>
         <ul>
@@ -38,27 +126,144 @@
             <li class="desplegableNav">
                 <a href="#" class="enlaceNav">Bicis</a>
                 <ul class="desplegableNavContenido">
-                    <li><a href="bicisCarretera.html" target="_blank">Carretera</a></li>
-                    <li><a href="bicisMontana.html" target="_blank">Montaña</a></li>
-                    <li><a href="bicisPista.html" target="_blank">Pista</a></li>
+                    <li><a href="bicisCarretera.html">Carretera</a></li>
+                    <li><a href="bicisMontana.html">Montaña</a></li>
+                    <li><a href="bicisPista.html">Pista</a></li>
                 </ul>
             </li>
             <li><a href="accesorios.html" class="enlaceNav">Accesorios</a></li>
-            <li><a href="#conocenos" class="enlaceNav">Conócenos</a></li>
-            <li><a href="blog.html" class="enlaceNav" target="_blank">Blog</a></li>
+            <li><a href="conocenos.html" class="enlaceNav">Conócenos</a></li>
+            <li><a href="blog.html" class="enlaceNav">Blog</a></li>
         </ul>
 
         <div id="cesta">
-            <a href="cestaCompra.html" target="_blank">
+            <a href="cestaCompra.html">
                 <i class="fa-solid fa-shopping-cart"></i>
             </a>
         </div>
 
         <div id="usuario">
-            <a href="registro.html" target="_blank">
+            <a href="registro.html">
                 <i class="fa-solid fa-user"></i>
 
             </a>
         </div>
 
     </nav>
+    <div class="blog-container">
+       
+        
+        <div class="blog-posts">
+            <!-- Blog 1 -->
+            <article class="blog-post">
+                <img src="fotos/Foto Blog 1 (Por qué elegir nuestras bicicletas de carretera).png" alt="Ciclista con bicicleta de carretera PepCycle" class="blog-image">
+                <div class="blog-content">
+                    <h2>¿Por qué elegir una bicicleta ligera marca PepCycle?</h2>
+                    <div class="blog-meta">
+                        Publicado por PepCycle | Categoría: Bicicletas de Carretera
+                    </div>
+                    <div class="blog-text">
+                        <p>En el mundo del ciclismo, cada gramo cuenta. Ya seas un amante de la velocidad o alguien que busca una experiencia más fluida y cómoda, una bicicleta ligera puede marcar la diferencia. En PepCycle, nos especializamos en diseñar bicicletas ligeras de alta gama que combinan tecnología, rendimiento y estilo.</p>
+                        
+                        <h3>¿Qué hace a nuestras bicicletas tan ligeras?</h3>
+                        <p>Trabajamos con materiales avanzados como aleaciones premium y carbono de última generación para conseguir cuadros resistentes pero ultraligeros. Esto no solo mejora la aceleración, sino que también facilita los ascensos y reduce el esfuerzo en rutas largas.</p>
+                        
+                        <h3>Innovación en cada componente</h3>
+                        <p>Desde las llantas hasta la transmisión, cada detalle en nuestras bicicletas de carretera ligeras está pensado para maximizar el rendimiento. Además, mantenemos un diseño elegante y minimalista, ideal para ciclistas que buscan destacar sin renunciar a la eficiencia.</p>
+                        
+                        <h3>Ligereza con conciencia</h3>
+                        <p>Nuestras bicicletas se fabrican siguiendo principios de sostenibilidad, eligiendo procesos que minimizan el impacto ambiental sin comprometer la calidad. Porque creemos que pedalear con propósito es pedalear mejor.</p>
+                        
+                        <h3>¿Estás listo para dar el salto?</h3>
+                        <p>Explora nuestra gama de bicicletas ligeras PepCycle y elige la que mejor se adapte a tu estilo. Ya sea que practiques ciclismo profesional o disfrutes de rutas de fin de semana, tenemos el modelo perfecto para ti.</p>
+                        
+                        <a href="bicisCarretera.html" class="blog-cta">Descubre nuestras bicicletas de carretera</a>
+                    </div>
+                </div>
+            </article>
+            
+            <!-- Blog 2 -->
+            <article class="blog-post">
+                <img src="fotos/Foto Blog 2 ( Bicicletas de montaña).png" alt="Ciclista con bicicleta de montaña PepCycle" class="blog-image">
+                <div class="blog-content">
+                    <h2>Bicicletas de montaña PepCycle: fuerza, control y libertad</h2>
+                    <div class="blog-meta">
+                        Publicado por PepCycle | Categoría: Bicicletas de Montaña
+                    </div>
+                    <div class="blog-text">
+                        <p>Si lo tuyo es salir de la carretera, perderte entre senderos y sentir la naturaleza bajo tus ruedas, necesitas una bicicleta de montaña que esté a la altura. En PepCycle diseñamos bicis pensadas para los más aventureros, con una mezcla de resistencia, control y diseño innovador.</p>
+                        
+                        <h3>Diseñadas para dominar cualquier terreno</h3>
+                        <p>Nuestros modelos de bicicletas de montaña ligeras están fabricados con materiales que absorben impactos sin añadir peso innecesario. El resultado: una conducción más ágil, segura y cómoda, tanto en bajadas técnicas como en subidas exigentes.</p>
+                        
+                        <h3>Tecnología que responde</h3>
+                        <p>Incorporamos sistemas de suspensión avanzados, frenos hidráulicos y geometrías que se adaptan a tu postura, para ofrecer bicicletas de alta gama para montaña que realmente se adaptan a ti. Porque cada camino es diferente, y tú necesitas una bici que esté preparada para todo.</p>
+                        
+                        <h3>Estética premium, espíritu salvaje</h3>
+                        <p>Una bicicleta de montaña no tiene por qué verse tosca o aburrida. En PepCycle cuidamos cada línea, cada acabado. El resultado es una bici con alma aventurera y aspecto sofisticado.</p>
+                        
+                        <h3>Únete al movimiento PepCycle</h3>
+                        <p>Descubre por qué cada vez más ciclistas eligen PepCycle como su marca de confianza para conquistar la montaña. Porque cuando pruebas una bici diseñada con pasión, ya no hay vuelta atrás.</p>
+                        
+                        <a href="bicisMontana.html" class="blog-cta">Explora nuestras bicicletas de montaña</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+
+      <footer>
+        <div class="footer-container">
+            <div id="contactoFooter" class="footer-column">
+                <p class="footer-title">Contáctanos:</p>
+                <ul>
+                    <li>📱: +34 684 181 438</li>
+                    <li>📧: medaccorreo@medac.com</li>
+                    <li>@pepcycle</li>
+                </ul>
+            </div>
+    
+            <div id="redesFooter" class="footer-column">
+                <p class="footer-title">Síguenos:</p>
+                <ul id="segundoUlFooter">
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank" class="redes facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com" target="_blank" class="redes x-twitter">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank" class="redes instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://web.telegram.org/a/" target="_blank" class="redes telegram">
+                            <i class="fa-brands fa-telegram-plane"></i>
+                        </a>
+                    </li>
+                                
+                    <li>
+                        <a href="https://www.tiktok.com" target="_blank" class="redes tiktok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+                    </li>
+                </ul>            
+            </div>
+        </div>
+    
+        <div class="enlacesWeb">
+            <a href="index.html">Inicio</a>
+            <a href="registro.html">Registro</a>
+            <a href="politicaPepcycle.html">Política</a>
+        </div>
+    
+        <hr>
+        <p class="copyright">&copy; Copyright Pepcycle 2025 | Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
