@@ -18,7 +18,103 @@
       margin: 0;
       height: 100vh;
     }
-    </style>
+
+        /* Estilos para el storytelling */
+    .storytelling-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 40px 20px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .storytelling-title {
+        font-size: 2.5rem;
+        color: #333;
+        text-align: center;
+        margin-bottom: 30px;
+        font-weight: 700;
+    }
+    
+    .storytelling-section {
+        margin-bottom: 30px;
+    }
+    
+    .storytelling-section p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #444;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    
+    .storytelling-highlight {
+        background-color: #f8f8f8;
+        padding: 25px;
+        border-left: 5px solid #3498db;
+        margin: 30px 0;
+        font-style: italic;
+    }
+    
+    .storytelling-values {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 40px 0;
+    }
+    
+    .value-card {
+        flex-basis: 30%;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+    
+    .value-card i {
+        font-size: 2.5rem;
+        color: #3498db;
+        margin-bottom: 15px;
+    }
+    
+    .value-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+    
+    .value-card p {
+        font-size: 1rem;
+        color: #666;
+    }
+    
+    .social-adaptation {
+        background-color: #edf7fd;
+        padding: 25px;
+        border-radius: 8px;
+        margin: 30px 0;
+    }
+    
+    .social-adaptation h3 {
+        color: #2980b9;
+        margin-bottom: 15px;
+    }
+    
+    @media (max-width: 768px) {
+        .storytelling-title {
+            font-size: 2rem;
+        }
+        
+        .value-card {
+            flex-basis: 100%;
+        }
+    }
+</style>
     <title>Pepcycle</title>
 </head>
 <body>
@@ -30,133 +126,142 @@
         </div>
     </header>
 
-    <nav>
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" id="hamburguesa">☰</label>
-        <ul>
-            <li><a href="index.html" class="enlaceNav">Inicio</a></li>
-            <li class="desplegableNav">
-                <a href="#" class="enlaceNav">Bicis</a>
-                <ul class="desplegableNavContenido">
-                    <li><a href="bicisCarretera.html">Carretera</a></li>
-                    <li><a href="bicisMontana.html">Montaña</a></li>
-                    <li><a href="bicisPista.html">Pista</a></li>
-                </ul>
-            </li>
-            <li><a href="accesorios.html" class="enlaceNav">Accesorios</a></li>
-            <li><a href="conocenos.html" class="enlaceNav">Conócenos</a></li>
-            <li><a href="blog.html" class="enlaceNav">Blog</a></li>
-        </ul>
+<nav>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" id="hamburguesa">☰</label>
+    <ul>
+        <li><a href="index.html" class="enlaceNav">Inicio</a></li>
+        <li class="desplegableNav">
+            <a href="#" class="enlaceNav">Bicis</a>
+            <ul class="desplegableNavContenido">
+                <li><a href="bicisCarretera.html">Carretera</a></li>
+                <li><a href="bicisMontana.html">Montaña</a></li>
+                <li><a href="bicisPista.html">Pista</a></li>
+            </ul>
+        </li>
+        <li><a href="accesorios.html" class="enlaceNav">Accesorios</a></li>
+        <li><a href="conocenos.html" class="enlaceNav">Conócenos</a></li>
+        <li><a href="blog.html" class="enlaceNav">Blog</a></li>
+    </ul>
 
-        <div id="cesta">
-            <a href="cestaCompra.html">
-                <i class="fa-solid fa-shopping-cart"></i>
-            </a>
-        </div>
-
-        <div id="usuario">
-            <a href="registro.html">
-                <i class="fa-solid fa-user"></i>
-
-            </a>
-        </div>
-
-    </nav>
-    <div id="imagenFondoIndex">
-        <div id="contenedorTituloIndex" id="conocenos">
-            <h2>¡Prepárate para vivir la experiencia PepCycle!</h2>
-        </div>
-        <div id="presentacionIndexUno">
-            <p>Bienvenido a PepCycle, donde la pasión por el ciclismo se une con la innovación. Queremos que encuentres la bicicleta perfecta para ti, 
-                aquella que se adapte a tu estilo y te haga disfrutar cada kilómetro.</p>
-        </div>
-        <div id="presentacionIndexDos">
-            <p>Nacimos con una idea clara: diseñar bicicletas que no solo ofrezcan rendimiento, sino que también sean una extensión 
-                de la personalidad de cada ciclista. En PepCycle, cada modelo ha sido pensado para ofrecerte la mejor experiencia, 
-                ya sea en carretera, pista o montaña. Combinamos tecnología de vanguardia, materiales de alta calidad y un diseño 
-                sofisticado para que puedas superar cualquier desafío.</p>
-        </div>
-        <div id="presentacionIndexTres" style="margin-bottom: 100px;">
-            <p>Más que una marca, somos una comunidad. Queremos que te unas a nosotros y formes parte de esta aventura sobre dos ruedas. 
-                Da igual si eres un ciclista experimentado o si acabas de empezar; en PepCycle encontrarás una bicicleta que te inspire a 
-                rodar sin límites. Explora nuestros modelos y descubre todo lo que podemos ofrecerte.</p>
-        </div>
-        <section style="padding: 0 30px; margin-bottom: 80px;"> <!--3 tipos bici-->
-            <div id="articulosIndex">
-                <div class="tdArticulosIndex">
-                    <a href="bicisCarretera.html" class="enlacesBicis" target="_blank">
-                        <img src="fotos/biciCarreteraPrincipal.webp" alt="Bici Carretera" class="imagenBiciIndex">
-                        <p class="tituloBicisIndex">Carretera</p>
-                    </a>
-                </div>
-                <div class="tdArticulosIndex">
-                    <a href="bicisMontana.html" class="enlacesBicis" target="_blank">
-                        <img src="fotos/biciMontanaPrincipal.webp" alt="Bici Montaña" class="imagenBiciIndex">
-                        <p class="tituloBicisIndex">Montaña</p>
-                    </a>
-                </div>
-                <div class="tdArticulosIndex">
-                    <a href="bicisPista.html" class="enlacesBicis" target="_blank">
-                        <img src="fotos/biciPistaPrincipal.webp" alt="Bici Pista" class="imagenBiciIndex">
-                        <p class="tituloBicisIndex">Pista</p>
-                    </a>
-                </div>
-            </div>
-        </section>
+    <div id="cesta">
+        <a href="cestaCompra.html">
+            <i class="fa-solid fa-shopping-cart"></i>
+        </a>
     </div>
 
-    <footer>
-        <div class="footer-container">
-            <div id="contactoFooter" class="footer-column">
-                <p class="footer-title">Contáctanos:</p>
-                <ul>
-                    <li>📱: +34 684 181 438</li>
-                    <li>📧: medaccorreo@medac.com</li>
-                    <li>@pepcycle</li>
-                </ul>
-            </div>
+    <div id="usuario">
+        <a href="registro.html">
+            <i class="fa-solid fa-user"></i>
+        </a>
+    </div>
+</nav>
+
+&lt;!-- Nuevo contenido de storytelling -->
+<div class="storytelling-container">
+    <h1 class="storytelling-title">PEPCYCLE: PEDALEANDO HACIA UNA NUEVA ERA</h1>
     
-            <div id="redesFooter" class="footer-column">
-                <p class="footer-title">Síguenos:</p>
-                <ul id="segundoUlFooter">
-                    <li>
-                        <a href="https://www.facebook.com" target="_blank" class="redes facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://x.com" target="_blank" class="redes x-twitter">
-                            <i class="fa-brands fa-x-twitter"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com" target="_blank" class="redes instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://web.telegram.org/a/" target="_blank" class="redes telegram">
-                            <i class="fa-brands fa-telegram-plane"></i>
-                        </a>
-                    </li>
-                                
-                    <li>
-                        <a href="https://www.tiktok.com" target="_blank" class="redes tiktok">
-                            <i class="fa-brands fa-tiktok"></i>
-                        </a>
-                    </li>
-                </ul>            
+    <div class="storytelling-section">
+        <p>PepCycle no es solo una marca de bicicletas, es un movimiento. Nació de una idea sencilla pero poderosa: combinar innovación, diseño y pasión para redefinir la experiencia sobre dos ruedas. Todo comenzó con una pregunta: ¿por qué conformarse con lo convencional cuando podemos revolucionar el ciclismo?</p>
+        
+        <p>En un mundo donde la tecnología avanza y las exigencias de los ciclistas evolucionan, vimos una oportunidad para crear algo único. Bicicletas diseñadas con precisión, enfocadas en ligereza y rendimiento, sin renunciar a la estética y la exclusividad. Creemos que cada pedalada cuenta, que cada ciclista tiene una historia que contar y que la bicicleta no es solo un medio de transporte o un deporte, sino una extensión de su personalidad.</p>
+    </div>
+    
+    <div class="storytelling-section">
+        <p>PepCycle resuelve una necesidad clave: ofrecer bicicletas de alta gama que combinen materiales de vanguardia con un diseño elegante y sofisticado. Nos dirigimos a aquellos que buscan más que una simple bicicleta: buscan una experiencia, una conexión con la carretera, la pista o la montaña.</p>
+        
+        <p>Nuestro propósito va más allá de vender bicicletas. Queremos inspirar a nuestra comunidad a superarse, a explorar nuevos caminos y a disfrutar del ciclismo con una actitud premium y una mentalidad innovadora. En PepCycle, cada detalle cuenta, cada modelo es una obra de arte y cada ciclista es parte de una revolución sobre ruedas.</p>
+    </div>
+    
+    <div class="storytelling-highlight">
+        <p>"En PepCycle, creamos bicicletas para quienes buscan más. Más ligereza, más diseño, más rendimiento. Cada modelo es una fusión de tecnología y pasión, pensada para ciclistas que no se conforman con lo convencional. Descubre nuestra colección y pedalea hacia una nueva era."</p>
+    </div>
+    
+    <div class="storytelling-section">
+        <h2>Nuestros Valores</h2>
+        
+        <div class="storytelling-values">
+            <div class="value-card">
+                <i class="fas fa-medal"></i>
+                <h3>Excelencia</h3>
+                <p>Apostamos por la calidad sin concesiones en cada detalle de nuestras bicicletas.</p>
+            </div>
+            
+            <div class="value-card">
+                <i class="fas fa-lightbulb"></i>
+                <h3>Innovación</h3>
+                <p>Buscamos constantemente nuevas tecnologías y soluciones para mejorar la experiencia ciclista.</p>
+            </div>
+            
+            <div class="value-card">
+                <i class="fas fa-users"></i>
+                <h3>Comunidad</h3>
+                <p>Fomentamos una comunidad de ciclistas apasionados que comparten nuestra visión.</p>
             </div>
         </div>
+    </div>
     
-        <div class="enlacesWeb">
-            <a href="index.html">Inicio</a>
-            <a href="registro.html">Registro</a>
-            <a href="politicaPepcycle.html">Política</a>
+    <div class="storytelling-section">
+        <h2>Nuestro Público</h2>
+        <p>Nuestro público objetivo son ciclistas apasionados, desde amateurs avanzados hasta profesionales, que valoran la tecnología, el diseño y la exclusividad en cada aspecto de su vida. Nos dirigimos a aquellos que no solo buscan una bicicleta, sino una experiencia premium que los haga sentir parte de algo más grande.</p>
+    </div>
+    
+    <div class="social-adaptation">
+        <h3>Síguenos en redes sociales</h3>
+        <p>"No es solo una bicicleta, es una declaración de intenciones. En PepCycle redefinimos el ciclismo con diseño, ligereza y rendimiento. ¿Estás listo para la revolución sobre ruedas? #PepCycle #RideTheRevolution"</p>
+    </div>
+</div>
+
+<footer>
+    <div class="footer-container">
+        <div id="contactoFooter" class="footer-column">
+            <p class="footer-title">Contáctanos:</p>
+            <ul>
+                <li>📱: +34 684 181 438</li>
+                <li>📧: medaccorreo@medac.com</li>
+                <li>@pepcycle</li>
+            </ul>
         </div>
-    
-        <hr>
-        <p class="copyright">&copy; Copyright Pepcycle 2025 | Todos los derechos reservados.</p>
-    </footer>
-</body>
-</html>
+
+        <div id="redesFooter" class="footer-column">
+            <p class="footer-title">Síguenos:</p>
+            <ul id="segundoUlFooter">
+                <li>
+                    <a href="https://www.facebook.com" target="_blank" class="redes facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com" target="_blank" class="redes x-twitter">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com" target="_blank" class="redes instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://web.telegram.org/a/" target="_blank" class="redes telegram">
+                        <i class="fa-brands fa-telegram-plane"></i>
+                    </a>
+                </li>
+                            
+                <li>
+                    <a href="https://www.tiktok.com" target="_blank" class="redes tiktok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </li>
+            </ul>            
+        </div>
+    </div>
+
+    <div class="enlacesWeb">
+        <a href="index.html">Inicio</a>
+        <a href="registro.html">Registro</a>
+        <a href="politicaPepcycle.html">Política</a>
+    </div>
+
+    <hr>
+    <p class="copyright">&copy; Copyright Pepcycle 2025 | Todos los derechos reservados.</p>
+</footer>
