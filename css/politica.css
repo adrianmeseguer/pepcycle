@@ -32,3 +32,64 @@
   margin: 0 auto;
   padding: 20px;
 }
+
+/* Estilos adicionales para la página de política */
+#contenedorPolitica {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.contenedorPoliticas {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.contenedorPoliticas h3 {
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  font-size: 1.4em;
+}
+
+.contenedorPoliticas strong {
+  color: #dc3545;
+}
+
+.contenedorPoliticas ul {
+  padding-left: 20px;
+}
+
+.contenedorPoliticas ul li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+/* Estilo específico para el aviso académico */
+.contenedorPoliticas:first-of-type {
+  border-left: 4px solid #dc3545;
+  background-color: #f8f9fa;
+}
+
+/* Mejora de la legibilidad en dispositivos móviles */
+@media (max-width: 768px) {
+  #contenedorPolitica {
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .contenedorPoliticas {
+    padding: 15px;
+  }
+}
