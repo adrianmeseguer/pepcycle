@@ -13,7 +13,16 @@
     background-image: url(fotos/imagenesFondo/fondoBicisMontana.webp);
     background-size: cover;
     background-position: center;
+    
 }
+
+
+
+.seccionPresentacionBicis{
+    color: white;
+    
+}
+
 
 /* PISTA */
 #imagenFondoPista {

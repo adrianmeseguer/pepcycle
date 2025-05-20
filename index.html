@@ -4,138 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
+    <script src="pop-up.js"></script>
+    <link rel="stylesheet" href="css/pop-up.css">
     <link rel="shortcut icon" href="fotos/logo/logo2.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <title>Pepcycle</title>
-  <style>
-        /* Estilos para el pop-up */
-        .popup-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
-        }plaintext
-    .popup-overlay.active {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    .popup-container {
-        background-color: white;
-        width: 90%;
-        max-width: 800px;
-        border-radius: 10px;
-        padding: 30px;
-        position: relative;
-        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
-        transform: scale(0.8);
-        transition: transform 0.3s ease;
-    }
-
-    .popup-overlay.active .popup-container {
-        transform: scale(1);
-    }
-
-    .popup-close {
-        position: absolute;
-        top: 15px;
-        right: 15px;
-        font-size: 24px;
-        cursor: pointer;
-        color: #333;
-        transition: color 0.2s;
-    }
-
-    .popup-close:hover {
-        color: #e74c3c;
-    }
-
-    .popup-title {
-        text-align: center;
-        color: #333;
-        margin-bottom: 20px;
-        font-size: 24px;
-    }
-
-    .popup-subtitle {
-        text-align: center;
-        color: #666;
-        margin-bottom: 30px;
-        font-size: 16px;
-    }
-
-    .popup-products {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .popup-product {
-        flex: 1;
-        min-width: 200px;
-        text-align: center;
-        padding: 15px;
-        border-radius: 8px;
-        transition: transform 0.2s, box-shadow 0.2s;
-        text-decoration: none;
-        color: inherit;
-    }
-
-    .popup-product:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    }
-
-    .popup-product img {
-        width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-bottom: 10px;
-        object-fit: cover;
-        aspect-ratio: 4/3;
-    }
-
-    .popup-product h3 {
-        margin: 10px 0;
-        color: #333;
-    }
-
-    .popup-product p {
-        color: #e74c3c;
-        font-weight: bold;
-        margin: 5px 0;
-    }
-
-    .popup-product .category {
-        display: inline-block;
-        background-color: #f1f1f1;
-        padding: 5px 10px;
-        border-radius: 20px;
-        font-size: 12px;
-        color: #666;
-        margin-bottom: 10px;
-    }
-
-    @media (max-width: 768px) {
-        .popup-products {
-            flex-direction: column;
-        }
-        
-        .popup-product {
-            margin-bottom: 20px;
-        }
-    }
-</style>
 
     
     
@@ -227,34 +100,48 @@
 </div>
 
 
-<div class="popup-overlay" id="welcomePopup">
-    <div class="popup-container">
-        <div class="popup-close" onclick="closePopup()">&times;</div>
-        <h2 class="popup-title">¡Bienvenido a PepCycle!</h2>
-        <p class="popup-subtitle">Descubre nuestros productos más destacados</p>
+<!-- Estructura HTML para el popup -->
+<div id="popup">
+    <div class="popup-contenido">
+        <span class="cerrar-popup" onclick="cerrarPopup()">&times;</span>
         
-        <div class="popup-products">
-            <a href="productos/endurance.html" class="popup-product">
-                <span class="category">Carretera</span>
-                <img src="fotos/imagenesBicis/bicisCarretera/Carretera_Endurance.webp" alt="Bicicleta Endurance">
-                <h3>Endurance</h3>
-                <p>5.983,58€</p>
-            </a>
-            
-            <a href="productos/trailblazer.html" class="popup-product">
-                <span class="category">Montaña</span>
-                <img src="fotos/imagenesBicis/bicisMontana/Montana_Trailblazer.webp" alt="Bicicleta Trailblazer">
-                <h3>Trailblazer</h3>
-                <p>7.780,24€</p>
-            </a>
-            
-            <a href="productos/trackPro.html" class="popup-product">
-                <span class="category">Pista</span>
-                <img src="fotos/imagenesBicis/bicisPista/Pista_TrackPro.webp" alt="Bicicleta Track Pro">
-                <h3>Track Pro</h3>
-                <p>11.347,99€</p>
-            </a>
+        <div class="popup-logo">
+            <img src="fotos/logo/logo2.png" alt="Logo PepCycle">
         </div>
+        
+        <h2 class="popup-titulo">¡Únete a la comunidad <span class="popup-destacado">PepCycle</span>!</h2>
+        <p class="popup-subtitulo">Suscríbete a nuestra newsletter y recibe ofertas exclusivas, consejos de ciclismo y las últimas novedades</p>
+        
+        <form class="popup-formulario">
+            <input type="email" id="correo" placeholder="Tu correo electrónico" autocomplete="email">
+            
+            <div class="popup-beneficios">
+                <div class="beneficio-item">
+                    <span class="beneficio-icon"><i class="fa-solid fa-tag"></i></span>
+                    <span>10% de descuento en tu primera compra</span>
+                </div>
+                <div class="beneficio-item">
+                    <span class="beneficio-icon"><i class="fa-solid fa-gift"></i></span>
+                    <span>Acceso a promociones exclusivas</span>
+                </div>
+                <div class="beneficio-item">
+                    <span class="beneficio-icon"><i class="fa-solid fa-bicycle"></i></span>
+                    <span>Consejos y rutas de ciclismo</span>
+                </div>
+            </div>
+            
+            <div class="popup-checkbox">
+                <input type="checkbox" id="cookies">
+                <label for="cookies">Acepto recibir comunicaciones comerciales y la <a href="politicaPepcycle.html" class="popup-enlace">política de privacidad</a> de PepCycle</label>
+            </div>
+            
+            <div id="mensaje"></div>
+            
+            <div class="popup-botones">
+                <button type="button" class="btn-popup btn-secundario" onclick="cerrarPopup()">Ahora no</button>
+                <button type="button" class="btn-popup btn-primario" onclick="aceptar()">¡Quiero suscribirme!</button>
+            </div>
+        </form>
     </div>
 </div>
 
@@ -312,31 +199,6 @@
     <p class="copyright">&copy; Copyright Pepcycle 2025 | Todos los derechos reservados.</p>
 </footer>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // For testing purposes, always show the popup
-        setTimeout(function() {
-            showPopup();
-        }, 1000);
-        
-    });
-
-    function showPopup() {
-        const popup = document.getElementById('welcomePopup');
-        if (popup) popup.classList.add('active');
-    }
-
-    function closePopup() {
-        const popup = document.getElementById('welcomePopup');
-        if (popup) popup.classList.remove('active');
-    }
-
-    // Add event listener to close button
-    const closeButton = document.querySelector('.popup-close');
-    if (closeButton) {
-        closeButton.addEventListener('click', closePopup);
-    }
-</script>
 
 </body>
 </html>

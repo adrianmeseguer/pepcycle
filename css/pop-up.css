@@ -1,0 +1,238 @@
+/* Main Popup Container */
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup Content Box */
+.popup-contenido {
+   background-color: rgb(71, 73, 77);
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.popup-contenido.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Close Button */
+.cerrar-popup {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.cerrar-popup:hover {
+    color: #e74c3c;
+    background-color: #f8f8f8;
+}
+
+/* Logo */
+.popup-logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.popup-logo img {
+    max-width: 120px;
+    height: auto;
+}
+
+/* Title and Subtitle */
+.popup-titulo {
+    text-align: center;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.popup-destacado {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.popup-subtitulo {
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Form Elements */
+.popup-formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.popup-formulario input[type="email"] {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.2s;
+}
+
+.popup-formulario input[type="email"]:focus {
+    border-color: #e74c3c;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+
+/* Benefits Section */
+.popup-beneficios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.beneficio-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+.beneficio-icon {
+    color: #e74c3c;
+    font-size: 16px;
+    width: 20px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+/* Checkbox Styling */
+.popup-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: white;
+    line-height: 1.4;
+}
+
+.popup-checkbox input[type="checkbox"] {
+    margin-top: 3px;
+}
+
+.popup-enlace {
+    color: #e74c3c;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.popup-enlace:hover {
+    text-decoration: underline;
+}
+
+/* Message Display */
+#mensaje {
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    transition: opacity 0.3s;
+    min-height: 20px;
+}
+
+#mensaje.error {
+    background-color: #fde8e8;
+    color: #e53e3e;
+    border: 1px solid #f8b4b4;
+}
+
+#mensaje.ok {
+    background-color: #e6fffa;
+    color: #047857;
+    border: 1px solid #a7f3d0;
+}
+
+/* Buttons */
+.popup-botones {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.btn-popup {
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.btn-primario {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-primario:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secundario {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+.btn-secundario:hover {
+    background-color: #e0e0e0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .popup-contenido {
+        padding: 20px;
+        width: 95%;
+    }
+    
+    .popup-titulo {
+        font-size: 20px;
+    }
+    
+    .popup-subtitulo {
+        font-size: 13px;
+    }
+    
+    .popup-botones {
+        flex-direction: column;
+    }
+    
+    .btn-popup {
+        width: 100%;
+    }
+}
